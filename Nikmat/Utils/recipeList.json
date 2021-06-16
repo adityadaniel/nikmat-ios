@@ -1,0 +1,86 @@
+{
+  "method": "GET",
+  "status": true,
+  "results": [
+    {
+      "title": "Resep Udang Vaname Cah Jamur, Tumisan Lezat yang Mudah dan Cepat",
+      "thumb": "https://www.masakapahariini.com/wp-content/uploads/2019/12/udang-vaname-cah-jamur-400x240.jpg",
+      "key": "resep-udang-vaname-cah-jamur",
+      "times": "30mnt",
+      "portion": "4 Porsi",
+      "dificulty": "Mudah"
+    },
+    {
+      "title": "Resep Chicken Cordon Bleu Isi Bayam, Menu Mewah di Akhir Minggu",
+      "thumb": "https://www.masakapahariini.com/wp-content/uploads/2019/11/chicken-cordon-bleu-400x240.jpg",
+      "key": "resep-chicken-cordon-bleu-isi-bayam",
+      "times": "1jam",
+      "portion": "3 Porsi",
+      "dificulty": "Cukup Rumit"
+    },
+    {
+      "title": "Resep Sambal Bajak Teri Pedas, Pelengkap Kelezatan di Setiap Acara Makan",
+      "thumb": "https://www.masakapahariini.com/wp-content/uploads/2021/01/sambal-bajak-teri-400x240.jpg",
+      "key": "resep-sambal-bajak-teri-pedas",
+      "times": "30mnt",
+      "portion": "6 Porsi",
+      "dificulty": "Mudah"
+    },
+    {
+      "title": "Resep Ikan Bumbu Taliwang Khas Lombok, Lauk Mewah di Akhir Pekan",
+      "thumb": "https://www.masakapahariini.com/wp-content/uploads/2019/06/ikan-bumbu-taliwang-400x240.jpg",
+      "key": "resep-ikan-bumbu-taliwang",
+      "times": "45mnt",
+      "portion": "4 Porsi",
+      "dificulty": "Mudah"
+    },
+    {
+      "title": "Resep Sambal Cumi Asin Cabai Gendot yang Pedas dan Bikin Nagih",
+      "thumb": "https://www.masakapahariini.com/wp-content/uploads/2021/06/Sambal-Cumi-Asin-Cabai-Gendot-400x240.jpg",
+      "key": "resep-sambal-cumi-asin-cabai-gendot",
+      "times": "1jam",
+      "portion": "4 Porsi",
+      "dificulty": "Mudah"
+    },
+    {
+      "title": "Resep Kroket Sayuran untuk Camilan Selama di Rumah Aja",
+      "thumb": "https://www.masakapahariini.com/wp-content/uploads/2020/06/resep-kroket-sayur-400x240.jpg",
+      "key": "resep-kroket-sayuran",
+      "times": "1jam",
+      "portion": "12 Porsi",
+      "dificulty": "Cukup Rumit"
+    },
+    {
+      "title": "Resep Batagor Tanpa Ikan Saus Asam Pedas , Buat Sendiri Lebih Seru dan Enak",
+      "thumb": "https://www.masakapahariini.com/wp-content/uploads/2021/02/Batagor-Tanpa-Ikan-Saus-Asam-Pedas-400x240.jpg",
+      "key": "resep-batagor-tanpa-ikan",
+      "times": "1jam",
+      "portion": "4 Porsi",
+      "dificulty": "Cukup Rumit"
+    },
+    {
+      "title": "Resep Tongseng Ayam Mercon, Selera Gurih Pedas untuk Keluarga Tercinta",
+      "thumb": "https://www.masakapahariini.com/wp-content/uploads/2018/12/tongseng-ayam-mercon-MAHI-6-400x240.jpg",
+      "key": "resep-tongseng-ayam-mercon",
+      "times": "1jam",
+      "portion": "4 Porsi",
+      "dificulty": "Mudah"
+    },
+    {
+      "title": "Resep Nasi Goreng Beras Merah, Cocok untuk yang Sedang Diet",
+      "thumb": "https://www.masakapahariini.com/wp-content/uploads/2019/07/nasi-merah-goreng_edited-400x240.jpg",
+      "key": "resep-nasi-goreng-beras-merah",
+      "times": "40mnt",
+      "portion": "4 Porsi",
+      "dificulty": "Mudah"
+    },
+    {
+      "title": "Resep Ikan Gurame Bakar Kecap Bango",
+      "thumb": "https://www.masakapahariini.com/wp-content/uploads/2018/04/resep-ikan-gurame-bakar-kecap-bango-400x240.jpg",
+      "key": "resep-ikan-gurame-bakar-kecap-bango",
+      "times": "50mnt",
+      "portion": "4 Porsi",
+      "dificulty": "Mudah"
+    }
+  ]
+}

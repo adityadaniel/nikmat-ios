@@ -7,18 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5832D38267A186900805D38 /* RecipeBriefInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5832D37267A186900805D38 /* RecipeBriefInformationView.swift */; };
+		E5832D3A267A187D00805D38 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5832D39267A187D00805D38 /* Icon.swift */; };
+		E5832D41267A298000805D38 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5832D40267A298000805D38 /* Network.swift */; };
+		E5832D46267A4B4A00805D38 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E5832D45267A4B4A00805D38 /* SDWebImageSwiftUI */; };
 		E5F99FCD2677C1C20010A46E /* NikmatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F99FCC2677C1C10010A46E /* NikmatApp.swift */; };
-		E5F99FCF2677C1C20010A46E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F99FCE2677C1C20010A46E /* ContentView.swift */; };
 		E5F99FD12677C1C40010A46E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F99FD02677C1C40010A46E /* Assets.xcassets */; };
 		E5F99FD42677C1C40010A46E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F99FD32677C1C40010A46E /* Preview Assets.xcassets */; };
+		E5F99FDB2677C1E90010A46E /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F99FDA2677C1E90010A46E /* RecipesView.swift */; };
+		E5F99FDD2677C2420010A46E /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F99FDC2677C2420010A46E /* FavoritesView.swift */; };
+		E5F99FDF2677C6610010A46E /* Bundle+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F99FDE2677C6610010A46E /* Bundle+Decodable.swift */; };
+		E5F99FE12677C6740010A46E /* recipeList.json in Resources */ = {isa = PBXBuildFile; fileRef = E5F99FE02677C6740010A46E /* recipeList.json */; };
+		E5F99FE32677C6C40010A46E /* RecipeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F99FE22677C6C40010A46E /* RecipeResponse.swift */; };
+		E5F99FE72677CB160010A46E /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F99FE62677CB160010A46E /* RecipeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5832D37267A186900805D38 /* RecipeBriefInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBriefInformationView.swift; sourceTree = "<group>"; };
+		E5832D39267A187D00805D38 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		E5832D40267A298000805D38 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		E5F99FC92677C1C10010A46E /* Nikmat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nikmat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F99FCC2677C1C10010A46E /* NikmatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NikmatApp.swift; sourceTree = "<group>"; };
-		E5F99FCE2677C1C20010A46E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5F99FD02677C1C40010A46E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5F99FD32677C1C40010A46E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5F99FDA2677C1E90010A46E /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
+		E5F99FDC2677C2420010A46E /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		E5F99FDE2677C6610010A46E /* Bundle+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Decodable.swift"; sourceTree = "<group>"; };
+		E5F99FE02677C6740010A46E /* recipeList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipeList.json; sourceTree = "<group>"; };
+		E5F99FE22677C6C40010A46E /* RecipeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponse.swift; sourceTree = "<group>"; };
+		E5F99FE62677CB160010A46E /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +43,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5832D46267A4B4A00805D38 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5832D3B267A291700805D38 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				E5832D48267A547100805D38 /* Model */,
+				E5F99FE62677CB160010A46E /* RecipeCell.swift */,
+				E5F99FDA2677C1E90010A46E /* RecipesView.swift */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		E5832D3F267A297400805D38 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E5832D40267A298000805D38 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E5832D47267A546100805D38 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E5F99FE02677C6740010A46E /* recipeList.json */,
+				E5F99FDE2677C6610010A46E /* Bundle+Decodable.swift */,
+				E5832D39267A187D00805D38 /* Icon.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E5832D48267A547100805D38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5F99FE22677C6C40010A46E /* RecipeResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E5F99FC02677C1C10010A46E = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +105,12 @@
 		E5F99FCB2677C1C10010A46E /* Nikmat */ = {
 			isa = PBXGroup;
 			children = (
+				E5832D47267A546100805D38 /* Utils */,
+				E5832D3F267A297400805D38 /* Network */,
+				E5832D3B267A291700805D38 /* Recipes */,
 				E5F99FCC2677C1C10010A46E /* NikmatApp.swift */,
-				E5F99FCE2677C1C20010A46E /* ContentView.swift */,
+				E5F99FDC2677C2420010A46E /* FavoritesView.swift */,
+				E5832D37267A186900805D38 /* RecipeBriefInformationView.swift */,
 				E5F99FD02677C1C40010A46E /* Assets.xcassets */,
 				E5F99FD22677C1C40010A46E /* Preview Content */,
 			);
@@ -83,6 +141,9 @@
 			dependencies = (
 			);
 			name = Nikmat;
+			packageProductDependencies = (
+				E5832D45267A4B4A00805D38 /* SDWebImageSwiftUI */,
+			);
 			productName = Nikmat;
 			productReference = E5F99FC92677C1C10010A46E /* Nikmat.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +172,9 @@
 				Base,
 			);
 			mainGroup = E5F99FC02677C1C10010A46E;
+			packageReferences = (
+				E5832D44267A4B4A00805D38 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = E5F99FCA2677C1C10010A46E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +191,7 @@
 			files = (
 				E5F99FD42677C1C40010A46E /* Preview Assets.xcassets in Resources */,
 				E5F99FD12677C1C40010A46E /* Assets.xcassets in Resources */,
+				E5F99FE12677C6740010A46E /* recipeList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +202,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5F99FCF2677C1C20010A46E /* ContentView.swift in Sources */,
+				E5F99FDD2677C2420010A46E /* FavoritesView.swift in Sources */,
+				E5F99FDB2677C1E90010A46E /* RecipesView.swift in Sources */,
 				E5F99FCD2677C1C20010A46E /* NikmatApp.swift in Sources */,
+				E5F99FE72677CB160010A46E /* RecipeCell.swift in Sources */,
+				E5832D38267A186900805D38 /* RecipeBriefInformationView.swift in Sources */,
+				E5832D41267A298000805D38 /* Network.swift in Sources */,
+				E5832D3A267A187D00805D38 /* Icon.swift in Sources */,
+				E5F99FDF2677C6610010A46E /* Bundle+Decodable.swift in Sources */,
+				E5F99FE32677C6C40010A46E /* RecipeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +348,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +377,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E5832D44267A4B4A00805D38 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E5832D45267A4B4A00805D38 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E5832D44267A4B4A00805D38 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E5F99FC12677C1C10010A46E /* Project object */;
 }
