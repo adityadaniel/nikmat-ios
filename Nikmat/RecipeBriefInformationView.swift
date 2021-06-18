@@ -14,21 +14,21 @@ struct RecipeBriefInformationView: View {
     HStack(spacing: 8) {
       HStack(spacing: 4) {
         Image(systemName: Icon.time)
-          .foregroundColor(.cyan)
+          .foregroundColor(.primary)
         Text(recipe.times)
           .foregroundColor(.secondary)
       }
       
       HStack(spacing: 4) {
         Image(systemName: Icon.portion)
-          .foregroundColor(.cyan)
+          .foregroundColor(.primary)
         Text(recipe.portion)
           .foregroundColor(.secondary)
       }
       
       HStack(spacing: 4) {
         Image(systemName: Icon.difficulty)
-          .foregroundColor(.cyan)
+          .foregroundColor(.primary)
         Text(recipe.difficulty)
           .foregroundColor(.secondary)
       }

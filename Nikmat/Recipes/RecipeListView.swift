@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct RecipesView: View {
+struct RecipeListView: View {
   @StateObject var viewModel = RecipeListViewModel(service: APIService.shared)
   
   var body: some View {
     NavigationView {
       if viewModel.isLoading {
         ProgressView()
-          .navigationTitle("Recipes")
+          .task {
+            await viewModel.recipeList()
+          }
+          .navigationTitle("Resep")
       } else {
         List {
           ForEach(viewModel.recipes) { recipe in
@@ -22,22 +25,19 @@ struct RecipesView: View {
               .listRowSeparator(.hidden)
           }
         }
-        .navigationTitle("Recipes")
+        .navigationTitle("Resep")
         .listStyle(.plain)
         .refreshable {
           await viewModel.recipeList()
         }
       }
     }
-    .task {
-      await viewModel.recipeList()
-    }
   }
 }
 
 struct RecipesView_Previews: PreviewProvider {
   static var previews: some View {
-    RecipesView()
+    RecipeListView()
   }
 }
 
@@ -45,7 +45,7 @@ struct RecipesView_Previews: PreviewProvider {
 class RecipeListViewModel: ObservableObject {
   private let service: APIService
   
-  @Published var isLoading: Bool = false
+  @Published var isLoading: Bool = true
   @Published var recipes: [Recipe] = []
   
   init(service: APIService) {
@@ -53,7 +53,6 @@ class RecipeListViewModel: ObservableObject {
   }
   
   func recipeList() async {
-    isLoading = true
     do {
       let response = try await service.GET(type: RecipeResponse.self, endpoint: .featuredRecipes)
       recipes = response.results
