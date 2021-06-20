@@ -19,16 +19,29 @@ struct RecipeListView: View {
           }
           .navigationTitle("Resep")
       } else {
-        List {
-          ForEach(viewModel.recipes) { recipe in
-            RecipeCell(recipe: recipe)
-              .listRowSeparator(.hidden)
+        GeometryReader { geo in
+          ScrollView {
+            ScrollableCategoryWidget(size: geo.size)
+            
+            FourImageWidgetView()
+            
+            VStack(alignment: .leading) {
+              
+              Text("Menu Terbaru")
+                .font(.title2)
+                .fontWeight(.semibold)
+              
+              ForEach(viewModel.recipes) { recipe in
+                RecipeCell(recipe: recipe)
+              }
+            }
+            .padding([.horizontal])
           }
-        }
-        .navigationTitle("Resep")
-        .listStyle(.plain)
-        .refreshable {
-          await viewModel.recipeList()
+          .navigationTitle("Resep")
+          .listStyle(.plain)
+          .refreshable {
+            await viewModel.recipeList()
+          }
         }
       }
     }

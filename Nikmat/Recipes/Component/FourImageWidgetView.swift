@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct MenuWidgetView: View {
+struct FourImageWidgetView: View {
+  
+  let categories: [Category] = Category.allDayMenus
+  
   let gridItems = [
     GridItem(.flexible(), spacing: 4),
     GridItem(.flexible(), spacing: 4),
@@ -19,10 +22,9 @@ struct MenuWidgetView: View {
         .font(.title2)
         .fontWeight(.semibold)
       LazyVGrid(columns: gridItems, spacing: 4) {
-        MenuImageView(imageName: "rica-rica-bebek", title: "Menu\nMakan Malam")
-        MenuImageView(imageName: "dessert", title: "Menu\nMakan Malam")
-        MenuImageView(imageName: "dessert", title: "Menu\nMakan Malam")
-        MenuImageView(imageName: "dessert", title: "Menu\nMakan Malam")
+        ForEach(categories) { category in
+          MenuImageView(imageName: category.imageName, title: category.name)
+        }
       }
     }
     .padding()
@@ -31,7 +33,7 @@ struct MenuWidgetView: View {
 
 struct MenuWidgetView_Previews: PreviewProvider {
   static var previews: some View {
-    MenuWidgetView()
+    FourImageWidgetView()
       .previewLayout(.sizeThatFits)
   }
 }
