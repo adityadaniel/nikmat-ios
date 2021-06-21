@@ -5,20 +5,19 @@
 //  Created by Daniel Aditya Istyana on 15/06/21.
 //
 
-import SwiftUI
 import SDWebImage
 import SDWebImageSwiftUI
+import SwiftUI
 
 struct RecipeCell: View {
-  
   let recipe: Recipe
-  
+
   var body: some View {
     ZStack {
       RoundedRectangle(cornerRadius: 10, style: .continuous)
         .fill(.white)
         .shadow(color: .secondary.opacity(0.4), radius: 1.8)
-      
+
       VStack(alignment: .leading, spacing: 8) {
         WebImage(url: URL(string: recipe.thumb))
           .resizable()
@@ -26,13 +25,13 @@ struct RecipeCell: View {
           .indicator(.activity)
           .scaledToFit()
           .frame(minWidth: 250, minHeight: 80)
-        
+
         VStack(alignment: .leading, spacing: 8) {
           Text(recipe.title)
             .foregroundColor(.black)
             .font(.body)
             .fontWeight(.medium)
-          
+
           RecipeBriefInformationView(recipe: recipe)
         }
         .padding([.leading, .trailing], 8)

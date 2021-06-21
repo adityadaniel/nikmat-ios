@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecipeBriefInformationView: View {
   let recipe: Recipe
-  
+
   var body: some View {
     HStack(spacing: 8) {
       HStack(spacing: 4) {
@@ -18,14 +18,14 @@ struct RecipeBriefInformationView: View {
         Text(recipe.times)
           .foregroundColor(.secondary)
       }
-      
+
       HStack(spacing: 4) {
         Image(systemName: Icon.portion)
           .foregroundColor(.primary)
-        Text(recipe.portion)
+        Text(recipe.serving)
           .foregroundColor(.secondary)
       }
-      
+
       HStack(spacing: 4) {
         Image(systemName: Icon.difficulty)
           .foregroundColor(.primary)

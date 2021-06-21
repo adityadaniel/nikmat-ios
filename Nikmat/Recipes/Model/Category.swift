@@ -5,8 +5,8 @@
 //  Created by Daniel Aditya Istyana on 20/06/21.
 //
 
-import Foundation
 import DeveloperToolsSupport
+import Foundation
 
 struct Category {
   let name: String
@@ -22,13 +22,13 @@ extension Category {
       Category(name: "Dessert", imageName: "dessert"),
     ]
   }
-  
+
   static var byIngredients: [Category] {
     return [
       .init(name: "Resep Ayam", imageName: "resep-ayam"),
       .init(name: "Resep Daging", imageName: "resep-daging"),
       .init(name: "Resep Sayuran", imageName: "resep-sayuran"),
-      .init(name: "Resep Seafood", imageName: "resep-seafood")
+      .init(name: "Resep Seafood", imageName: "resep-seafood"),
     ]
   }
 }

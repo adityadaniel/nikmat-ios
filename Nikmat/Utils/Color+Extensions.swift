@@ -10,4 +10,5 @@ import SwiftUI
 
 extension Color {
   static let primary = Color("Primary")
+  static let grayA68 = Color.gray.opacity(0.68)
 }

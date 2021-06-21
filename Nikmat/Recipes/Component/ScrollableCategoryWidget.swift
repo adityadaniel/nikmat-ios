@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct ScrollableCategoryWidget: View {
-  
   let categories: [Category] = Category.byIngredients
   let size: CGSize
-  
+
   var body: some View {
     ScrollView(.horizontal, showsIndicators: false) {
       HStack {
@@ -22,7 +21,7 @@ struct ScrollableCategoryWidget: View {
               .scaledToFill()
               .frame(width: size.width * 0.8, height: 180)
               .cornerRadius(10)
-            
+
             Text(category.name)
               .font(.body)
               .fontWeight(.medium)

@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct FourImageWidgetView: View {
-  
   let categories: [Category] = Category.allDayMenus
-  
+
   let gridItems = [
     GridItem(.flexible(), spacing: 4),
     GridItem(.flexible(), spacing: 4),
@@ -51,8 +50,8 @@ struct MenuImageView: View {
         Rectangle()
           .foregroundColor(.clear)
           .background(LinearGradient(colors: [Color.black.opacity(0.7), Color.clear], startPoint: .bottom, endPoint: .top))
-          .frame(maxHeight: 70)
-        ,
+          .frame(maxHeight: 70),
+
         alignment: .bottom
       )
       .overlay(
@@ -60,8 +59,8 @@ struct MenuImageView: View {
           .foregroundColor(.white)
           .font(.title3)
           .fontWeight(.semibold)
-          .padding(8)
-        ,
+          .padding(8),
+
         alignment: .bottomLeading
       )
       .cornerRadius(10)

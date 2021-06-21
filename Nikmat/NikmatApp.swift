@@ -14,13 +14,17 @@ struct NikmatApp: App {
       TabView {
         RecipeListView()
           .tabItem {
-            Label("Resep", systemImage: "text.book.closed.fill")
+            Label("Resep", systemImage: Icon.recipeTabIcon)
               .foregroundColor(.primary)
           }
         FavoritesView()
           .tabItem {
-            Label("Favorit", systemImage: "heart.fill")
+            Label("Favorit", systemImage: Icon.favoritesTabIcon)
               .foregroundColor(.primary)
+          }
+        SearchView()
+          .tabItem {
+            Label("Cari Resep", systemImage: Icon.searchTabIcon)
           }
       }
       .accentColor(.primary)

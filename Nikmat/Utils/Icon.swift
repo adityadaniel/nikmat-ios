@@ -8,8 +8,12 @@
 import Foundation
 
 enum Icon {
-    static let time = "alarm"
-    static let portion = "chart.pie"
-    static let difficulty = "gauge"
-    static let tagFilled = "tag.fill"
+  static let time = "alarm"
+  static let portion = "chart.pie"
+  static let difficulty = "gauge"
+  static let tagFilled = "tag.fill"
+  static let recipeTabIcon = "text.book.closed.fill"
+  static let favoritesTabIcon = "heart.fill"
+  static let searchTabIcon = "magnifyingglass"
+  static let heart = "suit.heart"
 }
