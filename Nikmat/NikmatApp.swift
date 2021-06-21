@@ -12,19 +12,17 @@ struct NikmatApp: App {
   var body: some Scene {
     WindowGroup {
       TabView {
-        RecipeListView()
+        HomeView()
           .tabItem {
-            Label("Resep", systemImage: Icon.recipeTabIcon)
-              .foregroundColor(.primary)
+            Label("", systemImage: Icon.recipeTabIcon)
           }
         FavoritesView()
           .tabItem {
-            Label("Favorit", systemImage: Icon.favoritesTabIcon)
-              .foregroundColor(.primary)
+            Label("", systemImage: Icon.favoritesTabIcon)
           }
         SearchView()
           .tabItem {
-            Label("Cari Resep", systemImage: Icon.searchTabIcon)
+            Label("", systemImage: Icon.searchTabIcon)
           }
       }
       .accentColor(.primary)

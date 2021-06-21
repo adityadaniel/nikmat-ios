@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RecipeListView: View {
+struct HomeView: View {
   @StateObject var viewModel = RecipeListViewModel(service: APIService.shared)
 
   var body: some View {
@@ -25,7 +25,7 @@ struct RecipeListView: View {
 
             if viewModel.isLoading {
               ProgressView()
-                .frame(width: geo.size.width)
+                .frame(width: abs(geo.frame(in: CoordinateSpace.global).width - 32))
                 .task {
                   await viewModel.recipeList()
                 }
@@ -49,7 +49,7 @@ struct RecipeListView: View {
 
 struct RecipesView_Previews: PreviewProvider {
   static var previews: some View {
-    RecipeListView()
+    HomeView()
   }
 }
 

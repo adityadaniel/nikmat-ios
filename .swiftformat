@@ -1,3 +1,4 @@
 --indent 2
 --wraparguments before-first
 --wrapcollections before-first
+--trailingclosures

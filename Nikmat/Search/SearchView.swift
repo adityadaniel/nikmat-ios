@@ -12,20 +12,35 @@ struct SearchView: View {
 
   var body: some View {
     NavigationView {
-      List {
-        ForEach(viewModel.recipeList) { recipe in
-          SearchResultCell(recipe: recipe)
-            .swipeActions(allowsFullSwipe: true) {
-              Button {
-                print("mark as favorites")
-              } label: {
-                Label("Simpan ke favorit", systemImage: Icon.heart)
-              }
+      Group {
+        if viewModel.isSearching {
+          VStack(spacing: 12) {
+            ProgressView()
+
+            Text("Mencari")
+              .font(.footnote)
+              .foregroundColor(.grayA68)
+          }
+        } else {
+          List {
+            ForEach(viewModel.recipeList) { recipe in
+              SearchResultCell(recipe: recipe)
+                .swipeActions(allowsFullSwipe: true) {
+                  Button {
+                    print("mark as favorites")
+                  } label: {
+                    Label("Simpan ke favorit", systemImage: Icon.heart)
+                  }
+                }
+                .tint(.primary)
             }
-            .tint(.primary)
+            .listRowSeparator(.hidden)
+          }
         }
-        .listRowSeparator(.hidden)
       }
+      .onChange(of: viewModel.searchText, perform: { newValue in
+        if newValue.isEmpty { viewModel.recipeList.removeAll() }
+      })
       .listStyle(.plain)
       .searchable("Soto ayam", text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
       .onSubmit(of: .search) {
