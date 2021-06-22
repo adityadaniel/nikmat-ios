@@ -20,7 +20,7 @@ extension Category {
       Category(name: "Sarapan", imageName: "sarapan", key: "sarapan"),
       Category(name: "Menu\nMakan Siang", imageName: "menu-makan-siang", key: "makan-siang"),
       Category(name: "Menu\nMakan Malam", imageName: "menu-makan-malam", key: "makan-malam"),
-      Category(name: "Dessert", imageName: "dessert", key: "dessert"),
+      Category(name: "Dessert", imageName: "dessert", key: "resep-dessert"),
     ]
   }
 

@@ -17,6 +17,7 @@ final class APIService {
     case search(query: String)
     case featuredArticles
     case recipeDetail(key: String)
+    case recipeByCategory(category: String)
 
     func path() -> String {
       switch self {
@@ -26,6 +27,8 @@ final class APIService {
         return "featured/articles"
       case let .recipeDetail(key: key):
         return "recipes/\(key)"
+      case let .recipeByCategory(category: category):
+        return "categories/recipes/\(category)"
       case .search:
         return "search/"
       }
@@ -33,7 +36,7 @@ final class APIService {
 
     func queryItems() -> [URLQueryItem]? {
       switch self {
-      case .featuredRecipes, .featuredArticles, .recipeDetail:
+      case .featuredRecipes, .featuredArticles, .recipeDetail, .recipeByCategory:
         return nil
       case let .search(query: query):
         let queryItem = URLQueryItem(name: "q", value: query)

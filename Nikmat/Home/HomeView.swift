@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-  @StateObject var viewModel = RecipeListViewModel(service: APIService.shared)
+  @StateObject var viewModel = HomeViewModel(service: APIService.shared)
 
   var body: some View {
     NavigationView {
@@ -54,7 +54,7 @@ struct RecipesView_Previews: PreviewProvider {
 }
 
 @MainActor
-class RecipeListViewModel: ObservableObject {
+class HomeViewModel: ObservableObject {
   private let service: APIService
 
   @Published var isLoading: Bool = true
