@@ -22,16 +22,19 @@ struct RecipeListView: View {
       if viewModel.isLoading {
         ProgressView()
       } else {
-        List {
+        ScrollView {
           ForEach(viewModel.recipes) { recipe in
-            RecipeCell(recipe: recipe)
-              .listRowSeparator(.hidden)
+            VStack {
+              NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
+                RecipeCell(recipe: recipe)
+              }
+            }
+            .padding([.horizontal])
           }
         }
         .refreshable {
           await viewModel.fetchRecipe()
         }
-        .listStyle(.plain)
       }
     }
     .navigationBarTitleDisplayMode(.inline)
@@ -62,6 +65,7 @@ final class RecipeListViewModel: ObservableObject {
   }
 
   func fetchRecipe() async {
+    guard recipes.isEmpty else { return }
     do {
       let response = try await service.GET(type: RecipeList.self, endpoint: .recipeByCategory(category: category.key))
       recipes = response.results

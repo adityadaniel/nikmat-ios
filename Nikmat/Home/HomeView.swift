@@ -31,7 +31,9 @@ struct HomeView: View {
                 }
             } else {
               ForEach(viewModel.recipes) { recipe in
-                RecipeCell(recipe: recipe)
+                NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
+                  RecipeCell(recipe: recipe)
+                }
               }
             }
           }

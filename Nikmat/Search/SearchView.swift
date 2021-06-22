@@ -17,22 +17,24 @@ struct SearchView: View {
           VStack(spacing: 12) {
             ProgressView()
 
-            Text("Mencari")
+            Text("Mencari...")
               .font(.footnote)
               .foregroundColor(.grayA68)
           }
         } else {
           List {
             ForEach(viewModel.recipeList) { recipe in
-              SearchResultCell(recipe: recipe)
-                .swipeActions(allowsFullSwipe: true) {
-                  Button {
-                    print("mark as favorites")
-                  } label: {
-                    Label("Simpan ke favorit", systemImage: Icon.heart)
-                  }
+              NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
+                SearchResultCell(recipe: recipe)
+              }
+              .swipeActions(allowsFullSwipe: true) {
+                Button {
+                  print("mark as favorites")
+                } label: {
+                  Label("Simpan ke favorit", systemImage: Icon.heart)
                 }
-                .tint(.primary)
+              }
+              .tint(.primary)
             }
             .listRowSeparator(.hidden)
           }

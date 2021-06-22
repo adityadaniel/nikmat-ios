@@ -11,6 +11,7 @@
 		118FD44A267F807D00D77357 /* FourImageWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FD449267F807D00D77357 /* FourImageWidgetView.swift */; };
 		118FD44C267F811300D77357 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FD44B267F811300D77357 /* Category.swift */; };
 		118FD44F267F875300D77357 /* ScrollableCategoryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FD44E267F875300D77357 /* ScrollableCategoryWidget.swift */; };
+		11968E4526821B4700F093D2 /* RecipeDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11968E4426821B4700F093D2 /* RecipeDetailResponse.swift */; };
 		11DF38172680DF020068DEEE /* SearchViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DF38162680DF020068DEEE /* SearchViewViewModel.swift */; };
 		11DF38192680DF2C0068DEEE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DF38182680DF2C0068DEEE /* String+Extensions.swift */; };
 		11DF381C2680E0AB0068DEEE /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DF381B2680E0AB0068DEEE /* SearchResultCell.swift */; };
@@ -37,6 +38,7 @@
 		118FD449267F807D00D77357 /* FourImageWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourImageWidgetView.swift; sourceTree = "<group>"; };
 		118FD44B267F811300D77357 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		118FD44E267F875300D77357 /* ScrollableCategoryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableCategoryWidget.swift; sourceTree = "<group>"; };
+		11968E4426821B4700F093D2 /* RecipeDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailResponse.swift; sourceTree = "<group>"; };
 		11DF38162680DF020068DEEE /* SearchViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewViewModel.swift; sourceTree = "<group>"; };
 		11DF38182680DF2C0068DEEE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		11DF381B2680E0AB0068DEEE /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		11968E41268213D700F093D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11968E4426821B4700F093D2 /* RecipeDetailResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		11DF381A2680E09C0068DEEE /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 		11E281A32681CB11008C5019 /* RecipeDetail */ = {
 			isa = PBXGroup;
 			children = (
+				11968E41268213D700F093D2 /* Model */,
 				11E281A42681CB1C008C5019 /* RecipeDetailView.swift */,
 			);
 			path = RecipeDetail;
@@ -275,6 +286,7 @@
 				118FD44A267F807D00D77357 /* FourImageWidgetView.swift in Sources */,
 				E5F99FDB2677C1E90010A46E /* HomeView.swift in Sources */,
 				E5F99FCD2677C1C20010A46E /* NikmatApp.swift in Sources */,
+				11968E4526821B4700F093D2 /* RecipeDetailResponse.swift in Sources */,
 				11DF38192680DF2C0068DEEE /* String+Extensions.swift in Sources */,
 				E5F99FE72677CB160010A46E /* RecipeCell.swift in Sources */,
 				11DF381C2680E0AB0068DEEE /* SearchResultCell.swift in Sources */,

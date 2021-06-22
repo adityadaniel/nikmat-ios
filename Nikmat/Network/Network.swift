@@ -26,7 +26,7 @@ final class APIService {
       case .featuredArticles:
         return "featured/articles"
       case let .recipeDetail(key: key):
-        return "recipes/\(key)"
+        return "recipe/\(key)"
       case let .recipeByCategory(category: category):
         return "categories/recipes/\(category)"
       case .search:
@@ -83,6 +83,7 @@ final class APIService {
     }
 
     do {
+      print(String(data: data, encoding: .utf8))
       return try decoder.decode(type, from: data)
     } catch {
       throw APIError.decodingError

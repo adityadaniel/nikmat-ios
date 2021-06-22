@@ -44,6 +44,7 @@ struct RecipeCell: View {
             .foregroundColor(.black)
             .font(.body)
             .fontWeight(.medium)
+            .multilineTextAlignment(.leading)
 
           RecipeBriefInformationView(recipe: recipe)
         }

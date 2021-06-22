@@ -12,22 +12,20 @@ struct NikmatApp: App {
   var body: some Scene {
     WindowGroup {
       TabView {
-        RecipeDetailView(recipeDetail: .mock)
-
-//        HomeView()
-//          .tabItem {
-//            Label("", systemImage: Icon.recipeTabIcon)
-//          }
-//        FavoritesView()
-//          .tabItem {
-//            Label("", systemImage: Icon.favoritesTabIcon)
-//          }
-//        SearchView()
-//          .tabItem {
-//            Label("", systemImage: Icon.searchTabIcon)
-//          }
+        HomeView()
+          .tabItem {
+            Label("", systemImage: Icon.recipeTabIcon)
+          }
+        FavoritesView()
+          .tabItem {
+            Label("", systemImage: Icon.favoritesTabIcon)
+          }
+        SearchView()
+          .tabItem {
+            Label("", systemImage: Icon.searchTabIcon)
+          }
       }
-//      .accentColor(.primary)
+      .accentColor(.primary)
     }
   }
 }
