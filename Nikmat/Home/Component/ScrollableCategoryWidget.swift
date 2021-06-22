@@ -15,16 +15,8 @@ struct ScrollableCategoryWidget: View {
     ScrollView(.horizontal, showsIndicators: false) {
       HStack {
         ForEach(categories) { category in
-          VStack(alignment: .leading) {
-            Image(category.imageName)
-              .resizable()
-              .scaledToFill()
-              .frame(width: size.width * 0.8, height: 180)
-              .cornerRadius(10)
-
-            Text(category.name)
-              .font(.body)
-              .fontWeight(.medium)
+          NavigationLink(destination: RecipeListView(category: category)) {
+            BigImageView(imageName: category.imageName, categoryName: category.name, width: size.width)
           }
         }
       }
@@ -36,5 +28,26 @@ struct ScrollableCategoryWidget: View {
 struct ScrollableCategoryWidget_Previews: PreviewProvider {
   static var previews: some View {
     ScrollableCategoryWidget(size: .init(width: 320, height: 180))
+  }
+}
+
+struct BigImageView: View {
+  let imageName: String
+  let categoryName: String
+  let width: CGFloat
+
+  var body: some View {
+    VStack(alignment: .leading) {
+      Image(imageName)
+        .resizable()
+        .scaledToFill()
+        .frame(width: width * 0.8, height: 180)
+        .cornerRadius(10)
+
+      Text(categoryName)
+        .font(.body)
+        .fontWeight(.medium)
+        .foregroundStyle(.black)
+    }
   }
 }

@@ -22,7 +22,9 @@ struct FourImageWidgetView: View {
         .fontWeight(.semibold)
       LazyVGrid(columns: gridItems, spacing: 4) {
         ForEach(categories) { category in
-          MenuImageView(imageName: category.imageName, title: category.name)
+          NavigationLink(destination: RecipeListView(category: category)) {
+            MenuImageView(imageName: category.imageName, title: category.name)
+          }
         }
       }
     }
@@ -51,7 +53,6 @@ struct MenuImageView: View {
           .foregroundColor(.clear)
           .background(LinearGradient(colors: [Color.black.opacity(0.7), Color.clear], startPoint: .bottom, endPoint: .top))
           .frame(maxHeight: 70),
-
         alignment: .bottom
       )
       .overlay(
@@ -59,8 +60,8 @@ struct MenuImageView: View {
           .foregroundColor(.white)
           .font(.title3)
           .fontWeight(.semibold)
+          .multilineTextAlignment(.leading)
           .padding(8),
-
         alignment: .bottomLeading
       )
       .cornerRadius(10)
