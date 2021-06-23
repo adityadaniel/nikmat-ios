@@ -74,6 +74,8 @@ final class APIService {
     guard let urlRequest = urlComponents.url else {
       throw APIError.invalidUrl
     }
+    
+    print(urlRequest.absoluteURL.absoluteString)
 
     let (data, response) = try await URLSession.shared.data(from: urlRequest)
     guard let resp = response as? HTTPURLResponse,

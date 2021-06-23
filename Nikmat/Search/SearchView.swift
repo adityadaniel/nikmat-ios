@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchView: View {
-  @StateObject var viewModel = SearchViewViewModel(service: APIService.shared)
+  @ObservedObject var viewModel: SearchViewViewModel
 
   var body: some View {
     NavigationView {
@@ -29,7 +29,7 @@ struct SearchView: View {
               }
               .swipeActions(allowsFullSwipe: true) {
                 Button {
-                  print("mark as favorites")
+                  viewModel.saveRecipe(recipe: recipe)
                 } label: {
                   Label("Simpan ke favorit", systemImage: Icon.heart)
                 }
@@ -52,11 +52,5 @@ struct SearchView: View {
       }
       .navigationTitle("Cari Resep")
     }
-  }
-}
-
-struct SearchView_Previews: PreviewProvider {
-  static var previews: some View {
-    SearchView()
   }
 }

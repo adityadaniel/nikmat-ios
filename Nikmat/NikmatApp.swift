@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct NikmatApp: App {
+  @StateObject private var storageProvider = StorageProvider(isInMemory: true)
+  
   var body: some Scene {
     WindowGroup {
       TabView {
@@ -20,12 +22,14 @@ struct NikmatApp: App {
           .tabItem {
             Label("", systemImage: Icon.favoritesTabIcon)
           }
-        SearchView()
+        SearchView(viewModel: SearchViewViewModel(service: APIService.shared, storageProvider: storageProvider))
           .tabItem {
             Label("", systemImage: Icon.searchTabIcon)
           }
       }
       .accentColor(.primary)
+      .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
+      .environmentObject(storageProvider)
     }
   }
 }

@@ -10,12 +10,15 @@ import SwiftUI
 @MainActor
 class SearchViewViewModel: ObservableObject {
   private let apiService: APIService
+  private let storageProvider: StorageProvider
+  
   @Published var isSearching: Bool = false
   @Published var recipeList: [Recipe] = []
   @Published var searchText: String = ""
 
-  init(service: APIService) {
-    apiService = service
+  init(service: APIService, storageProvider: StorageProvider) {
+    self.apiService = service
+    self.storageProvider = storageProvider
   }
 
   func searchRecipe() async {
@@ -28,5 +31,9 @@ class SearchViewViewModel: ObservableObject {
     } catch {
       print(error.localizedDescription)
     }
+  }
+  
+  func saveRecipe(recipe: Recipe) {
+    storageProvider.toggleSave(recipe: recipe)
   }
 }

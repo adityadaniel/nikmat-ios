@@ -8,31 +8,6 @@
 import SDWebImageSwiftUI
 import SwiftUI
 
-@MainActor
-final class RecipeDetailViewViewModel: ObservableObject {
-  @Published var recipeDetail: RecipeDetail? = nil
-
-  private let service: APIService
-  private let key: String
-
-  init(service: APIService, key: String) {
-    self.service = service
-    self.key = key
-  }
-
-  func fetchRecipeDetail(key: String) async {
-    do {
-      let response = try await service.GET(
-        type: RecipeDetailResponse.self,
-        endpoint: .recipeDetail(key: key)
-      )
-      recipeDetail = response.results
-    } catch {
-      print(error.localizedDescription)
-    }
-  }
-}
-
 struct RecipeDetailView: View {
   @StateObject var viewModel: RecipeDetailViewViewModel
   let recipe: Recipe
@@ -58,7 +33,6 @@ struct RecipeDetailView: View {
               .fontWeight(.medium)
 
             RecipeBriefInformationView(recipe: recipeDetail.convertToRecipe(withKey: recipe.key))
-//              .frame(width: 250)
               .padding([.vertical], 2)
 
             Text("Bahan-bahan")

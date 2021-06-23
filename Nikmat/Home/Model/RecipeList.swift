@@ -22,6 +22,15 @@ struct Recipe {
   let key: String
   let serving: String
   let difficulty: String
+  
+  internal init(title: String, thumb: String, times: String, key: String, serving: String, difficulty: String) {
+    self.title = title
+    self.thumb = thumb
+    self.times = times
+    self.key = key
+    self.serving = serving
+    self.difficulty = difficulty
+  }
 }
 
 extension Recipe {
