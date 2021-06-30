@@ -14,7 +14,13 @@ struct RecipeListView: View {
 
   init(category: Category) {
     self.category = category
-    _viewModel = StateObject(wrappedValue: RecipeListViewModel(service: APIService.shared, category: category))
+    _viewModel = StateObject(
+      wrappedValue: RecipeListViewModel(
+        service: APIService.shared,
+        category: category,
+        storageProvider: StorageProvider.shared
+      )
+    )
   }
 
   var body: some View {

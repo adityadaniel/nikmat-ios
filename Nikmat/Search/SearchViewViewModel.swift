@@ -11,13 +11,13 @@ import SwiftUI
 class SearchViewViewModel: ObservableObject {
   private let apiService: APIService
   private let storageProvider: StorageProvider
-  
+
   @Published var isSearching: Bool = false
   @Published var recipeList: [Recipe] = []
   @Published var searchText: String = ""
 
   init(service: APIService, storageProvider: StorageProvider) {
-    self.apiService = service
+    apiService = service
     self.storageProvider = storageProvider
   }
 
@@ -32,7 +32,7 @@ class SearchViewViewModel: ObservableObject {
       print(error.localizedDescription)
     }
   }
-  
+
   func saveRecipe(recipe: Recipe) {
     storageProvider.toggleSave(recipe: recipe)
   }

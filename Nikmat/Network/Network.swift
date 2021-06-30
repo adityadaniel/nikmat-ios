@@ -74,7 +74,7 @@ final class APIService {
     guard let urlRequest = urlComponents.url else {
       throw APIError.invalidUrl
     }
-    
+
     print(urlRequest.absoluteURL.absoluteString)
 
     let (data, response) = try await URLSession.shared.data(from: urlRequest)
@@ -85,7 +85,6 @@ final class APIService {
     }
 
     do {
-      print(String(data: data, encoding: .utf8))
       return try decoder.decode(type, from: data)
     } catch {
       throw APIError.decodingError

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-  @StateObject var viewModel = HomeViewModel(service: APIService.shared)
+  @ObservedObject var viewModel: HomeViewModel
 
   var body: some View {
     NavigationView {
@@ -49,30 +49,37 @@ struct HomeView: View {
   }
 }
 
-struct RecipesView_Previews: PreviewProvider {
-  static var previews: some View {
-    HomeView()
-  }
-}
-
 @MainActor
 class HomeViewModel: ObservableObject {
   private let service: APIService
+  private let storageProvider: StorageProvider
 
   @Published var isLoading: Bool = true
   @Published var recipes: [Recipe] = []
 
-  init(service: APIService) {
+  init(service: APIService, storageProvider: StorageProvider) {
     self.service = service
+    self.storageProvider = storageProvider
   }
 
   func recipeList() async {
+    let savedRecipe = storageProvider.fetchAllSavedRecipe()
+
     do {
       let response = try await service.GET(type: RecipeList.self, endpoint: .featuredRecipes)
       recipes = response.results
+      savedRecipe.forEach { saved in
+        if let savedRecipeIndex = recipes.firstIndex(where: { $0.key == saved.key }) {
+          recipes[savedRecipeIndex].isFavorite = true
+        }
+      }
       isLoading = false
     } catch {
       print(error.localizedDescription)
     }
+  }
+
+  func save(recipe: Recipe) {
+    storageProvider.toggleSave(recipe: recipe)
   }
 }

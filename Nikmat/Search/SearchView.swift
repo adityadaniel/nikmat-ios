@@ -44,7 +44,7 @@ struct SearchView: View {
         if newValue.isEmpty { viewModel.recipeList.removeAll() }
       })
       .listStyle(.plain)
-      .searchable("Soto ayam", text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
+      .searchable(text: $viewModel.searchText, prompt: "Soto ayam")
       .onSubmit(of: .search) {
         async {
           await viewModel.searchRecipe()

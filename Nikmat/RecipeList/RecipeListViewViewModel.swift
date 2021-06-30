@@ -14,10 +14,12 @@ final class RecipeListViewModel: ObservableObject {
 
   private let service: APIService
   private let category: Category
+  private let storageProvider: StorageProvider
 
-  init(service: APIService, category: Category) {
+  init(service: APIService, category: Category, storageProvider: StorageProvider) {
     self.service = service
     self.category = category
+    self.storageProvider = storageProvider
   }
 
   func fetchRecipe() async {
@@ -29,5 +31,9 @@ final class RecipeListViewModel: ObservableObject {
     } catch {
       print(error.localizedDescription)
     }
+  }
+
+  func saveFavoriteRecipe(recipe: Recipe) {
+    storageProvider.toggleSave(recipe: recipe)
   }
 }

@@ -16,4 +16,5 @@ enum Icon {
   static let favoritesTabIcon = "heart.fill"
   static let searchTabIcon = "magnifyingglass"
   static let heart = "suit.heart"
+  static let heartFill = "suit.heart.fill"
 }

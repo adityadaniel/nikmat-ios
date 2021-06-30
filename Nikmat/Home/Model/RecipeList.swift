@@ -10,7 +10,7 @@ import Foundation
 struct RecipeList {
   let method: String
   let status: Bool
-  let results: [Recipe]
+  var results: [Recipe]
 }
 
 extension RecipeList: Decodable {}
@@ -22,7 +22,8 @@ struct Recipe {
   let key: String
   let serving: String
   let difficulty: String
-  
+  var isFavorite: Bool = false
+
   internal init(title: String, thumb: String, times: String, key: String, serving: String, difficulty: String) {
     self.title = title
     self.thumb = thumb
@@ -52,4 +53,25 @@ extension Recipe: Identifiable {
   }
 }
 
-extension Recipe: Decodable {}
+extension Recipe: Decodable {
+  private enum CodingKeys: String, CodingKey {
+    case title
+    case thumb
+    case times
+    case key
+    case serving
+    case difficulty
+    case isFavorite
+  }
+
+  init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    title = try container.decode(String.self, forKey: .title)
+    thumb = try container.decode(String.self, forKey: .thumb)
+    times = try container.decode(String.self, forKey: .times)
+    key = try container.decode(String.self, forKey: .key)
+    serving = try container.decode(String.self, forKey: .serving)
+    difficulty = try container.decode(String.self, forKey: .difficulty)
+    isFavorite = try container.decodeIfPresent(Bool.self, forKey: .isFavorite) ?? false
+  }
+}

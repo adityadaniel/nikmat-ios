@@ -9,27 +9,37 @@ import SwiftUI
 
 @main
 struct NikmatApp: App {
-  @StateObject private var storageProvider = StorageProvider(isInMemory: true)
-  
+  @StateObject private var dataController = StorageProvider.shared
+
   var body: some Scene {
     WindowGroup {
       TabView {
-        HomeView()
-          .tabItem {
-            Label("", systemImage: Icon.recipeTabIcon)
-          }
+        HomeView(
+          viewModel: HomeViewModel(
+            service: APIService.shared,
+            storageProvider: StorageProvider.shared
+          )
+        ).tabItem {
+          Label("", systemImage: Icon.recipeTabIcon)
+        }
+
         FavoritesView()
           .tabItem {
             Label("", systemImage: Icon.favoritesTabIcon)
           }
-        SearchView(viewModel: SearchViewViewModel(service: APIService.shared, storageProvider: storageProvider))
-          .tabItem {
-            Label("", systemImage: Icon.searchTabIcon)
-          }
+
+        SearchView(
+          viewModel: SearchViewViewModel(
+            service: APIService.shared,
+            storageProvider: StorageProvider.shared
+          )
+        ).tabItem {
+          Label("", systemImage: Icon.searchTabIcon)
+        }
       }
       .accentColor(.primary)
-      .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
-      .environmentObject(storageProvider)
+      .environment(\.managedObjectContext, dataController.persistentContainer.viewContext)
+      .environmentObject(dataController)
     }
   }
 }
