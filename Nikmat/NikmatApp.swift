@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// Try stackedDiff workflow, this is new changes
+// Try stackedDiff workflow, this is new changes and this is after code review:
 @main
 struct NikmatApp: App {
   @StateObject private var dataController = StorageProvider.shared
