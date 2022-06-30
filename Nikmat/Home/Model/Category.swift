@@ -8,6 +8,7 @@
 import DeveloperToolsSupport
 import Foundation
 
+// Changes in category here
 struct Category {
   let name: String
   let imageName: String
